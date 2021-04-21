@@ -26,9 +26,9 @@ public class GeoJsonController {
     @FXML
     public void initialize(){
 
-        locationColumn.setCellValueFactory(new PropertyValueFactory<Feature, String>("place"));
-        timeColumn.setCellValueFactory(new PropertyValueFactory<Feature, String>("time"));
-        magnitudeColumn.setCellValueFactory(new PropertyValueFactory<Feature, String>("magnitude"));
+        locationColumn.setCellValueFactory(new PropertyValueFactory<GeoJsonFeed.Feature, String>("place"));
+        timeColumn.setCellValueFactory(new PropertyValueFactory<GeoJsonFeed.Feature, String>("time"));
+        magnitudeColumn.setCellValueFactory(new PropertyValueFactory<GeoJsonFeed.Feature, String>("magnitude"));
 
         Retrofit retrofit = new Retrofit.Builder()
                 .baseUrl("https://earthquake.usgs.gov")

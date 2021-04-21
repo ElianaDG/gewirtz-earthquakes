@@ -27,8 +27,8 @@ public class DownloadGeoJson {
                 .blockingGet();
 
 
-        Feature largest = feed.features.get(0);
-        for(Feature feature : feed.features){
+        GeoJsonFeed.Feature largest = feed.features.get(0);
+        for(GeoJsonFeed.Feature feature : feed.features){
             if (feature.properties.mag > largest.properties.mag){
                 largest = feature;
             }
